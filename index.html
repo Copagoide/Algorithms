@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./Pathfinding-Visualizer/style.css">
+    <link rel="stylesheet" href="./Sorting-Visualizer/style.css">
+
+    <title>Algorithms</title>
+</head>
+<body>
+    <div class="container">
+        <div class="background-width">
+            <div class="page left">
+                <!-- Header -->
+                <header id="header1">
+                    <div class="logo">
+                        <h1>Pathfinding Visualizer</h1>
+                    </div>
+                    <div class="options">
+                        <h1 id="findButton">Find</h1>
+                        <h1 id="moveButton">Move</h1>
+                        <h1 id="mazeButton">Maze</h1>
+                        <h1 id="clearButton">Clear</h1>
+                    </div>
+                    <h1 class="nextButton" onclick="slide('next')">
+                        Next 
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 192 512">
+                            <path fill="currentColor" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
+                        </svg>
+                    </h1>
+                </header>
+
+                <!-- Main -->
+                <div class="main1">
+                    <table id="pixelCanvas"></table>
+                </div>
+
+                <!-- Scripts -->
+                <script src="./Pathfinding-Visualizer/scripts/grid.js"></script>
+                <script src="./Pathfinding-Visualizer/scripts/move.js"></script>
+                <script src="./Pathfinding-Visualizer/scripts/finder.js"></script>
+                <script src="./Pathfinding-Visualizer/scripts/clear.js"></script>
+                <script src="./Pathfinding-Visualizer/scripts/maze.js"></script>
+            </div>
+
+            <div class="page mid"> 
+                <!-- TRANSITION PAGE --> 
+                <header id="header2"></header>
+                <script src="./transitionHeader.js"></script>
+            </div>
+
+            <div class="page right">
+                <!-- Header -->
+                <header id="header3">
+                    <!-- <div class="wrapper"> -->
+                    <h1 class="prevButton" onclick="slide('prev')">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 192 512">
+                            <path fill="currentColor" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path>
+                        </svg>
+                        Back
+                    </h1>
+                    <div class="options">
+                        <h1 id="newButton">New</h1>
+                        <h1 id="speedButton">Speed</h1>
+                        <ul class="speedList">
+                            <li><h1 id="speedListLow">Low</h1></li>
+                            <li><h1 id="speedListMedium">Medium</h1></li>
+                            <li><h1 id="speedListHigh">High</h1></li>
+                            <li><h1 id="speedListOriginal">Original</h1></li>
+                        </ul>
+                        <h1 id="algButton">Algorithm</h1>
+                        <ul class="algList">
+                            <li><h1 id="algListSelectionSort">Selection Sort</h1></li>
+                            <li><h1 id="algListInsertionSort">Insertion Sort</h1></li>
+                            <li><h1 id="algListBubbleSort">Bubble Sort</h1></li>
+                            <li><h1 id="algListShakerSort">Shaker Sort</h1></li>
+                            <li><h1 id="algListMergesort">Mergesort</h1></li>
+                            <li><h1 id="algListQuicksort">Quicksort</h1></li>
+                        </ul>
+                        <h1 id="sortButton">Sort</h1>
+                    </div>
+                    <div class="logo2">
+                        <h1>Sorting Visualizer</h1>
+                    </div>
+                    <!-- </div> -->
+                </header>
+                
+                <!-- Main -->
+                <div class="main2">
+                    <div id="tableWrapper1">
+                        <div id="tableWrapper2">
+                            <table id="tableSet"></table>
+                        </div>
+                    </div>
+
+                    <div id="container">
+                        <div id="leftSideContainer">
+                            <p id="algSelected">Alg: </p>
+                            <p id="speedSelected">Speed: </p>
+                        </div>
+                        
+                        <div id="rightSideContainer">
+                            <p id="funFact">Fun Fact: </p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Scripts -->
+                <script src="./Sorting-Visualizer/scripts/grid.js"></script>
+
+                <script src="./Sorting-Visualizer/scripts/buttons/newButton.js"></script>
+                <script src="./Sorting-Visualizer/scripts/buttons/speedButton.js"></script>
+                <script src="./Sorting-Visualizer/scripts/buttons/speedButtonToggle.js"></script>
+                <script src="./Sorting-Visualizer/scripts/buttons/algButton.js"></script>
+                <script src="./Sorting-Visualizer/scripts/buttons/algButtonToggle.js"></script>
+                <script type="module" src="./Sorting-Visualizer/scripts/buttons/sortButton.js"></script>
+
+                <script type="module" src="./Sorting-Visualizer/scripts/algorithms/selectionSort.js"></script>
+                <script type="module" src="./Sorting-Visualizer/scripts/algorithms/insertionSort.js"></script>
+                <script type="module" src="./Sorting-Visualizer/scripts/algorithms/bubbleSort.js"></script>
+                <script type="module" src="./Sorting-Visualizer/scripts/algorithms/shakerSort.js"></script>
+                <script type="module" src="./Sorting-Visualizer/scripts/algorithms/mergeSort.js"></script>
+                <script type="module" src="./Sorting-Visualizer/scripts/algorithms/quickSort.js"></script>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./slide.js"></script>
+</body>
+</html>
+
+<!-- All icons used were provided by Font Awesome: https://fontawesome.com/ -->
